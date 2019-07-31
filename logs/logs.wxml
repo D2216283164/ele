@@ -1,0 +1,48 @@
+<view class="log-list">
+   <view class="header">
+      <view class="top">
+          <view class="header-img">
+            <!-- <image src="../img/brand@2x.png"></image>  -->
+            <image src="{{list.avatar}}"></image>
+          </view>
+          <view class="big">
+             <!-- name -->
+             <view bindtap="Covershow" class="pin">
+                <image src="../img/brand@2x.png"></image> 
+                <block>{{list.name}}</block>
+             </view> 
+             <!-- 蜂鸟转送  -->
+             <view style="font-size:30rpx;margin:10rpx 0 10rpx; 0">
+                <block>{{list.description}}</block> /  <block>{{list.deliveryTime}}分钟送达</block>
+             </view>
+             <!-- 支付 -->
+             <view class="alipay" style="font-size:25rpx"> 
+                <view class="cut">
+                  <image src="../img/decrease_2@2x.png"></image>
+                  <block>{{list.supports[0].description}}</block>
+                </view>
+                <view class="length" bindtap="Covershow">{{list.supports.length}}个 ></view>
+             </view>               
+          </view>
+      </view>
+      <view class="notice">
+          <text class="notice-tex">公告</text>
+          <text class="ing" bindtap="Covershow">{{list.bulletin}}</text>
+          <text>></text>
+      </view>
+      <view class="change">
+          <text bindtap="shop">商品</text>
+          <text >评价</text>
+          <text >商家</text>
+      </view> 
+      <text>wm</text>
+      <view hidden="flag1">11111111111</view>
+      <view hidden="flag2">222222222222</view>
+      <view hidden="flag3">3333333333</view>
+   </view>
+   <!-- 遮罩组件 -->
+   <cover id="cover"></cover>
+
+
+
+</view>

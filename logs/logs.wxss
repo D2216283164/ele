@@ -1,0 +1,65 @@
+.log-list {
+   width:100%;
+   height:100%
+}
+/* 头部 */
+.header{
+  width:100%;height:348rpx;
+  position:absolute;top: 0; 
+}
+/* 品牌 */
+.top{
+  width:100%;height:212rpx;
+  box-sizing:border-box;
+  padding:36rpx 18rpx 30rpx 40rpx;  
+  background:rgba(7, 17, 23, 0.603);
+  display: flex;
+  color: white
+}
+/*头部图片*/
+.header-img{
+  margin-right:32rpx;
+}
+.big{
+  width:600rpx;
+}
+/* .header-img img{width:100% ;height:100%;border-radius:10rpx} */
+.header-img image{width:140rpx;height:150rpx;border-radius:7rpx}
+/* 品牌 */
+.pin{
+  color: white; font-weight:bold;display: flex; align-items: center
+}
+/* 品牌照片 */
+
+.pin image{width:65rpx; height:40rpx;margin-right:12rpx}
+
+/* 在线 支付 */
+.alipay,.cut{
+  display: flex;justify-content: space-between;align-items:center
+}
+/* 减少 */
+.cut image{
+  width:30rpx;height:30rpx;margin-right:8rpx;
+}
+.length{
+  padding:10rpx 17rpx;background:rgba(7, 17, 23, 0.411);border-radius:30rpx;
+}
+/*公告*/
+.notice{
+  width:100%; height:56rpx; background:rgba(7, 17, 27, 0.3); color:255,255,255;
+  font-size:25rpx; display: flex;align-content: space-between;align-items:center;
+  padding:0 20rpx;
+}
+.notice-tex{
+  background: white;color:black;margin-right:15rpx;padding:2rpx;border-radius:5rpx;
+}
+.ing{
+  width:85%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis
+}
+
+/*切换页面*/
+.change{
+  width:100%; height:80rpx; font-size:30rpx;
+  display: flex;justify-content: space-around;
+  align-items: center; border:1px solid gainsboro;
+}
