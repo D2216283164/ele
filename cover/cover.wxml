@@ -1,0 +1,44 @@
+<!--pages/components/cover/cover.wxml-->
+<view class='cover-container' hidden="{{show}}">
+   <view class="cover">
+     <view class='cover-name'>
+       <text>粥品香坊（大运村)</text>
+       <view class='star'>
+         <image width='48rpx' src='../../assets/img/star48_on@2x.png'></image>
+         <image width='48rpx' src='../../assets/img/star48_on@2x.png'></image>
+         <image width='48rpx' src='../../assets/img/star48_on@2x.png'></image>
+         <image width='48rpx' src='../../assets/img/star48_on@2x.png'></image>
+         <image width='48rpx' src='../../assets/img/star48_off@2x.png'></image>
+       </view>
+       <view class='title'>
+         <text>优惠信息</text>
+         <view class='t-content'> 
+            <view class="el">
+              <image src='../../assets/img/decrease_1@2x.png'></image><text>满减</text>
+            </view>
+             <view class="el">
+              <image src='../../assets/img/decrease_1@2x.png'></image><text>满减</text>
+            </view>
+             <view class="el">
+              <image src='../../assets/img/decrease_1@2x.png'></image><text>满减</text>
+            </view>
+             <view class="el">
+              <image src='../../assets/img/decrease_1@2x.png'></image><text>满减</text>
+            </view>
+             <view class="el">
+              <image src='../../assets/img/decrease_1@2x.png'></image><text>满减</text>
+            </view>
+         </view>
+       </view>
+       <view class='title'>
+         <text>商家公告</text>
+         <view class="i-content">
+           <text>粥品香坊其烹饪粥料的秘方源于中国千年古法，在融和现代制作工艺，由世界烹饪大师屈浩先生领衔研发。坚守纯天然、0添加的良心品质深得消费者青睐，发展至今成为粥类的引领品牌。是2008年奥运会和2013年园博会指定餐饮服务商。</text>
+         </view>
+       </view>
+     </view>
+     <view class='close'>
+       <text bindtap="Coverhide">x</text>
+     </view>
+   </view>
+</view>
