@@ -1,0 +1,40 @@
+<!--pages/components/addShop/addShop.wxml-->
+<view class="shop-list">
+  <view class='nr'>
+    <view class='meal'>
+      <view class='ul'>
+        <view class='li' wx:for="{{shopList}}"  wx:key="id">{{item.name}}</view>
+      </view>
+    </view>
+    <view class='meal-list'>
+      <view class="list-info" wx:for="{{shopList}}"  wx:key="id">
+        <view class='top-name'>{{item.name}}</view>
+        <view class='item' wx:for="{{item.foods}}" wx:for-item="foods" wx:key="{{item.id}}" >
+          <image src="{{foods.image}}" bindtap='goInfo' data-id="{{foods.id}}"></image> 
+          <view class='info'>
+            <view class='info-name'>{{foods.name}}</view>
+            <view class='info-class'>{{foods.description}}</view>
+            <view class='info-class'>月售{{foods.sellCount}}份   好评率{{foods.rating}}%</view>
+            <view class='info-price'>
+              <text>￥{{foods.price}}</text> {{foods.oldPrice}}
+              <view class='control'>
+                <view class='increase'>-</view>
+                <view class='num'>0</view>
+                <view class='add'>+</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <cart></cart>
+  <!-- <view class='cart'>
+     <view class='big-circle'>
+       <view class='small-circle'></view>
+     </view>
+     <view class='allnum'>￥0</view>
+     <view class='pull'>另需配送费￥4元</view>
+     <view class='buy'>￥20起送</view>
+  </view> -->
+</view>

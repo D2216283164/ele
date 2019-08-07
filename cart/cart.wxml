@@ -1,0 +1,9 @@
+<!--pages/components/cart/cart.wxml-->
+<view class='cart'>
+     <view class='big-circle'>
+       <view class='small-circle'></view>
+     </view>
+     <view class='allnum'>￥0</view>
+     <view class='pull'>另需配送费￥4元</view>
+     <view class='buy'>￥20起送</view>
+</view>
