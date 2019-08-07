@@ -1,0 +1,73 @@
+<!--pages/view/Info/Info.wxml-->
+<view class='box'>
+  <view class='list-info'>
+    <image src='{{needInfo.image}}'></image>
+    <view class='info'>
+      <view class='name'>{{needInfo.name}}</view>
+      <view class='sell'>月售{{needInfo.sellCount}}份 好评率{{needInfo.rating}}%</view>
+      <view class='price'>
+        <text>￥{{needInfo.price}}</text>
+        <view class='add'>加入购物车</view>
+      </view>
+    </view>
+    <view class='geduan'></view>
+    <view class='info'>
+      <view class='name'>商品介绍</view>
+      <view class='tell'>{{needInfo.info}}</view>
+    </view>
+    <view class='geduan'></view>
+    <view class='info'>
+      <view class='name'>商品评价</view>
+      <view class='assess'>
+        <view class='all' bindtap='alltab'>全部</view>
+        <view class='pull' bindtap='pulltab'>推荐</view>
+        <view class='down' bindtap='downtab'>吐槽</view>
+      </view>
+      <view class='look'>
+        <icon class='logo' type="success" size="20" />只看有内容的评价</view>
+      <!-- 全部 -->
+      <view class='a-all' wx:for="{{needInfo.ratings}}" wx:key="id" hidden='{{flag1}}'>
+        <view class='item'>
+          <text>{{item.rateTime}}</text>
+          <view class='user'>{{item.username}}
+            <image src='{{item.avatar}}'></image>
+          </view>
+        </view>
+        <view class='content'>
+          <text wx:if="{{item.rateType==0}}">👍</text>
+          <text wx:elif="{{item.rateType==1}}">👎</text>
+          <text>{{item.text}}</text>
+        </view>
+      </view>
+      <!-- 推荐 -->
+      <view class='a-all' wx:for="{{needInfo.ratings}}" wx:key="id" hidden='{{flag2}}' wx:if="{{item.rateType==0}}">
+        <view class='item'>
+          <text>{{item.rateTime}}</text>
+          <view class='user'>{{item.username}}
+            <image src='{{item.avatar}}'></image>
+          </view>
+        </view>
+        <view class='content'>
+          <text wx:if="{{item.rateType==0}}">👍</text>
+          <text wx:elif="{{item.rateType==1}}">👎</text>
+          <text>{{item.text}}</text>
+        </view>
+      </view>
+      <!-- 吐槽 -->
+      <view class='a-all' wx:for="{{needInfo.ratings}}" wx:key="id" hidden='{{flag3}}' wx:if="{{item.rateType==1}}">
+        <view class='item'>
+          <text>{{item.rateTime}}</text>
+          <view class='user'>{{item.username}}
+            <image src='{{item.avatar}}'></image>
+          </view>
+        </view>
+        <view class='content'>
+          <text wx:if="{{item.rateType==0}}">👍</text>
+          <text wx:elif="{{item.rateType==1}}">👎</text>
+          <text>{{item.text}}</text>
+        </view>
+      </view>
+    </view>
+    <cart class="cartbar"></cart>
+  </view>
+</view>
