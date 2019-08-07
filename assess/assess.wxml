@@ -1,0 +1,139 @@
+<view class="assess">
+   <view class="score">
+   <!-- 综合评分 -->
+      <view class="scoreOne">
+         <view class="s1">{{list.score}}</view>
+         <view class="s2">综合评分</view>
+         <view class="s3">高于周边商家69.2%</view>
+      </view>
+      <view class="scoreTwo">
+         <view >
+            <view class="grade grade_text">服务态度</view>
+            <view class="grade grade_img"><image src="../../img/star36_on@2x.png"></image></view> 
+            <view class="grade grade_img"><image src="../../img/star36_on@2x.png"></image></view> 
+            <view class="grade grade_img"><image src="../../img/star36_on@2x.png"></image></view> 
+            <view class="grade grade_img"><image src="../../img/star36_on@2x.png"></image></view> 
+            <view class="grade grade_img"><image src="../../img/star36_off@2x.png"></image></view> 
+            <view class="grade grade_time">{{list.serviceScore}} </view>
+         </view>
+         <view class="gradeMargin">
+            <view class="grade grade_text">商品评分</view>
+            <view class="grade grade_img"><image src="../../img/star36_on@2x.png"></image></view> 
+            <view class="grade grade_img"><image src="../../img/star36_on@2x.png"></image></view> 
+            <view class="grade grade_img"><image src="../../img/star36_on@2x.png"></image></view> 
+            <view class="grade grade_img"><image src="../../img/star36_on@2x.png"></image></view> 
+            <view class="grade grade_img"><image src="../../img/star36_off@2x.png"></image></view> 
+            <view class="grade grade_time">{{list.foodScore}} </view>
+        </view>
+         <view>
+           <view class="go">送达时间</view>
+           <view class="go go_times">{{list.deliveryTime}}分钟</view>
+         </view>
+      </view>  
+   </view>
+   <!-- 空白 -->
+   <view class="blank"></view>
+   <!--全部 满意 不满意 -->
+   <view class="ratingselect">
+      <view class="pingAll">
+         <view class="all ping_one" bindtap="All">全部 {{list.ratingCount}}</view> 
+         <view class="all ping_two" bindtap="goods">满意{{item.rateType.length}}</view> 
+         <view class="all ping_three" bindtap="notgood">不满意</view> 
+          <!-- 线 -->
+         <view class="line"></view>
+      </view>
+      <view class="pingContent">
+      <icon type="success" size="25" color="#00c850" style="margin-right:15rpx;"/>
+      <icon type="success" size="25" color="#93999f" style="margin-right:15rpx;display:none;"/>
+         只看有内容的评价
+      </view>
+      <view class="Content" hidden="{{flag1}}">
+         <view wx:for="{{dataList}}" wx:key="i" class="forContent">
+            <view>
+                <image src="{{item.avatar}}" class="avatar"></image>
+            </view>
+            <view class="content_right">
+               <view>
+                  <text>{{item.username}}</text>
+                  <text style="margin-left:250rpx;">{{item.rateTime}}</text>
+               </view>
+               <view>
+                  <view class="grade grade_img"><image src="../../img/star36_on@2x.png"></image></view> 
+                  <view class="grade grade_img"><image src="../../img/star36_on@2x.png"></image></view> 
+                  <view class="grade grade_img"><image src="../../img/star36_on@2x.png"></image></view> 
+                  <view class="grade grade_img"><image src="../../img/star36_on@2x.png"></image></view> 
+                  <view class="grade grade_img"><image src="../../img/star36_off@2x.png"></image></view>
+                  <text>{{item.score}}</text>
+               </view>
+               <view>{{item.text}}</view>
+               <view wx:for="{{item.recommend}}" wx:key="id" class="recommend">
+                 <text class="tagText">{{item}}</text>
+               </view>
+             </view>
+         </view>
+       </view>
+   
+      <view hidden="{{flag2}}"  class="Content">
+          <view wx:for="{{dataList}}" wx:key="i" wx:if="{{item.rateType===0}}"  class="forContent">
+            <view>
+                <image src="{{item.avatar}}" class="avatar"></image>
+            </view>
+            <view class="content_right">
+               <view>
+                  <text>{{item.username}}</text>
+                  <text style="margin-left:250rpx;">{{item.rateTime}}</text>
+               </view>
+               <view>
+                  <view class="grade grade_img"><image src="../../img/star36_on@2x.png"></image></view> 
+                  <view class="grade grade_img"><image src="../../img/star36_on@2x.png"></image></view> 
+                  <view class="grade grade_img"><image src="../../img/star36_on@2x.png"></image></view> 
+                  <view class="grade grade_img"><image src="../../img/star36_on@2x.png"></image></view> 
+                  <view class="grade grade_img"><image src="../../img/star36_off@2x.png"></image></view>
+                  <text>{{item.score}}</text>
+               </view>
+               <view>{{item.text}}</view>
+               <view wx:for="{{item.recommend}}" wx:key="id" class="recommend">
+                 <text class="tagText">{{item}}</text>
+               </view>
+             </view> 
+          </view>
+       </view>
+
+       <view hidden="{{flag3}}"  class="Content">
+          <view wx:for="{{dataList}}" wx:key="i" wx:if="{{item.rateType===1}}" class="forContent">
+             <view>
+                <image src="{{item.avatar}}" class="avatar"></image>
+            </view>
+            <view class="content_right">
+               <view>
+                  <text>{{item.username}}</text>
+                  <text style="margin-left:250rpx;">{{item.rateTime}}</text>
+               </view>
+               <view>
+                  <view class="grade grade_img"><image src="../../img/star36_on@2x.png"></image></view> 
+                  <view class="grade grade_img"><image src="../../img/star36_on@2x.png"></image></view> 
+                  <view class="grade grade_img"><image src="../../img/star36_on@2x.png"></image></view> 
+                  <view class="grade grade_img"><image src="../../img/star36_on@2x.png"></image></view> 
+                  <view class="grade grade_img"><image src="../../img/star36_off@2x.png"></image></view>
+                  <text>{{item.score}}</text>
+               </view>
+               <view>{{item.text}}</view>
+               <view wx:for="{{item.recommend}}" wx:key="id" class="recommend">
+                 <text class="tagText">{{item}}</text>
+               </view>
+             </view>
+          </view>
+       </view>
+
+
+
+   </view>
+   
+
+   
+   
+   <view>王曼曼</view>
+   <view>王曼曼</view>
+   <view>王曼曼</view>
+   <view>王曼曼</view>
+</view>

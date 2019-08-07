@@ -1,0 +1,101 @@
+.assess{
+   width:100%;height:150rpx;box-sizing:border-box;
+}
+/* 综合评分 */
+.score{
+   display: flex;
+   justify-content: space-between;
+   align-items: center; 
+    padding:40rpx;
+}
+.scoreOne{
+   width:275rpx;height:100%; text-align: center; margin-right:20rpx;
+}
+.s1{
+  font-size:56rpx; color:rgb(255,153,0); margin-bottom:5rpx
+}
+.s2{
+  font-size:30rpx; color:rgb(7,17,27); margin-bottom:16rpx
+}
+.s3{
+  font-size:25rpx; color:gainsboro
+}
+.scoreTwo{
+  width:474rpx;height:100%;border-left:1px solid gainsboro; padding: 6px 0 6px 24px;
+  font-size:27rpx;
+}
+.time{
+  margin:20rpx 0;
+}
+/* 星星 */
+image {width:30rpx;height:30rpx}
+.grade,.go{display: inline-block}
+.grade_text{
+  margin-right:20rpx;
+}
+.grade_img{
+   margin-right:10rpx; 
+}
+/* 评分 */
+.grade_time{color: rgb(255,153,0);margin-left:10rpx}
+/* 送到时间 */
+.go_times{
+  margin-left:20rpx;color:#93999f;
+}
+.gradeMargin{
+  margin:20rpx 0;
+}
+/* 空白 */
+.blank{
+  width:100%;height:30rpx;    
+  border-top: 1px solid rgba(7,17,27,.1);
+  border-bottom: 1px solid rgba(7,17,27,.1);
+  background: #f3f5f7;
+}
+/* 全部 满意 */
+.pingAll{
+  width:100%; padding:36rpx 36rpx;font-size:25rpx;
+  box-sizing:border-box;border:1px solid gainsboro;
+}
+.all{padding:17rpx 25rpx; display: inline-block;margin-right:16rpx; } 
+.ping_one{
+  background:#00a0dc; color:white; 
+}
+.ping_two{
+  background: rgba(0,160,220,.2); color: #4d555d;
+}
+.ping_three{
+  background: rgba(77,85,93,.2); color: #4d555d;
+}
+.line{
+  position:absolute; left:0;bottom:0; border-top: 1px solid rgba(7,17,27,.1);
+  width:100%; 
+}
+/* 只看内容 */
+.pingContent{
+  width:100%; padding:24rpx 36rpx;color: #93999f;font-size:30rpx;display: flex;align-items: center;
+  box-sizing:border-box;
+}
+/* 评价 */
+.Content{
+  padding:0 23px;width:100%;box-sizing:border-box;font-size:30rpx;
+  border-bottom:1px solid gainsboro;
+}
+.forContent{
+  display: flex; padding:36rpx 0;border-bottom:1px solid gainsboro;
+}
+/* 头像 */
+.avatar{
+  width:56rpx;height:56rpx; margin-right:24rpx;border-radius:50%;
+}
+/* 标签 */
+.recommend{
+  display: inline-block;
+}
+.tagText{
+  border:1px solid rgba(7,17,27,.1);color: #93999f;padding: 0 12rpx;
+  margin-right:17rpx; font-size:25rpx;
+}
+.content_right{
+  line-height:50rpx;
+}
